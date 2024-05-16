@@ -37,7 +37,7 @@ public class NewServletPJ extends HttpServlet {
 			out.println(name);
 			out.println(mail);
 			out.println(pswd);
-		
+		Collection.details(name,mail,pswd);
 	}
 
 	/**
