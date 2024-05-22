@@ -36,7 +36,7 @@
 
 </head>
 <body>
-<form action="servlet3" method="post">
+<form action="servlet" method="post">
 <div class="main">
  <div class="signup">  
             <label for="chk" aria-hidden="true">Sign up</label>
