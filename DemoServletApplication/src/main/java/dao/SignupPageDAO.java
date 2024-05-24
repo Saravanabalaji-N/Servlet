@@ -28,7 +28,7 @@ public  class SignupPageDAO {
 	   
 	public static ArrayList<SignupPojo> read() throws ClassNotFoundException, SQLException {
 		ArrayList<SignupPojo> list=new ArrayList<SignupPojo>();
-		SignupPojo pj = new SignupPojo();
+		
 		Connection connection =DatabaseConnection.connectionDrive();
         
         String query = "Select * from login1";
@@ -37,23 +37,28 @@ public  class SignupPageDAO {
         ResultSet rs=prepare.executeQuery();
         
         while(rs.next()) {
-            
+        
             pj.setName(rs.getString("Username"));
             pj.setTel(rs.getString("PhoneNo"));
             pj.setMail(rs.getString("MailId"));
             
-
-            
-       
-        
-
-            System.out.println(list);
+            list.add(pj);
         }
-        list.add(pj);
-        return list;
-        
-        
+       
+        return list;   
         
     }
+	
+	   
+		public static void delete(String name) throws ClassNotFoundException, SQLException {
+			
+			Connection connection =DatabaseConnection.connectionDrive();
+	        
+	        String query = "ALTER TABLE login DROP COLUMN UserName;";
+	        PreparedStatement prepare = connection.prepareStatement(query);
+	        
+	       int  rs=prepare.executeUpdate();
+	     System.out.println(rs+"deleted");
+	        }
+		}
 
-}

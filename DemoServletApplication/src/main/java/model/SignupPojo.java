@@ -4,6 +4,7 @@ public class SignupPojo {
 
 	String name;
 	String tel;
+
 	String mail;
 	public String getName() {
 		return name;
@@ -24,4 +25,11 @@ public class SignupPojo {
 		this.mail = mail;
 	}	
 	
+	
+	public SignupPojo(String name, String tel, String mail) {
+		super();
+		this.name = name;
+		this.tel = tel;
+		this.mail = mail;
+	}
 }

@@ -40,9 +40,9 @@
 <div class="main">
  <div class="signup">  
             <label for="chk" aria-hidden="true">Sign up</label>
-            <input type="text" name="txt" placeholder="User name" required>
-            <input type="tel" name="tel" placeholder="PhoneNo" required>
-            <input type="email" name="mail" placeholder="E-mail Id" required>
+            <input type="text" value="c:out value='${user.txt}'" name="txt" placeholder="User name" required>
+            <input type="tel" value="c:out value='${user.tel}'" name="tel" placeholder="PhoneNo" required>
+            <input type="email" value="c:out value='${user.mail}'"  name="mail" placeholder="E-mail Id" required>
             <button>Sign up</button>
 </div>
 </div>

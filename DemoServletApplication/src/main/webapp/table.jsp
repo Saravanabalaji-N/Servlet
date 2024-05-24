@@ -15,13 +15,6 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-table {
-  width: 100%;
-}
-
-th {
-  height: 70px;
-}
 </style>
 </head>
 <body>
@@ -32,7 +25,7 @@ th {
    <th>Phone</th>
    <th>Mail</th>
 </tr>
- <% ArrayList<SignupPojo> values=(ArrayList<SignupPojo>)request.getAttribute("signup");
+ <% ArrayList<SignupPojo> values=SignupPageDAO.read();
  
  for( SignupPojo values1:values){
               
